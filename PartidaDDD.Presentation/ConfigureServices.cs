@@ -15,6 +15,11 @@ namespace PartidaDDD.Presentation
             services.AddTransient<ICarRepository, CarRepository>();
             services.AddTransient<CarHandler>();
             services.AddTransient<FormRegisterCar>();
+
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<UserHandler>();
+            services.AddTransient<FormRegisterUser>();
+
             services.AddTransient<IDBConfiguration, MSSqlConfiguration>();
             services.AddSingleton<IDB, MSSqlDB>();
 

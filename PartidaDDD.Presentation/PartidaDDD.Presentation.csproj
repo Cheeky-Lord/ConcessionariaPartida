@@ -72,6 +72,12 @@
     <Compile Include="Forms\FormRegisterCar.Designer.cs">
       <DependentUpon>FormRegisterCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormRegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRegisterUser.Designer.cs">
+      <DependentUpon>FormRegisterUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormMainPage.resx">
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormRegisterCar.resx">
       <DependentUpon>FormRegisterCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRegisterUser.resx">
+      <DependentUpon>FormRegisterUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +103,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PartidaDDD.Domain.Commands.Inputs.RegisterCar.datasource" />
+    <None Include="Properties\DataSources\PartidaDDD.Domain.Commands.Inputs.RegisterUser.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

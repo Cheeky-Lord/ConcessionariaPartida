@@ -40,8 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Handlers\CarHandler.cs" />
+    <Compile Include="Commands\Handlers\UserHandler.cs" />
     <Compile Include="Commands\Inputs\RegisterCar.cs" />
+    <Compile Include="Commands\Inputs\RegisterUser.cs" />
     <Compile Include="Commands\Results\RegisterCarCommandResult.cs" />
+    <Compile Include="Commands\Results\RegisterUserCommandResult.cs" />
     <Compile Include="Entities\Car.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Enums\Models.cs" />
