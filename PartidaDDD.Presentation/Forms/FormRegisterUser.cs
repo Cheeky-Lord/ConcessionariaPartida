@@ -33,5 +33,10 @@ namespace PartidaDDD.Presentation.Forms
         {
             registerUserBindingSource.AddNew();
         }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

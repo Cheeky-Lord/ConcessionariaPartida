@@ -23,8 +23,8 @@ namespace PartidaDDD.Infra.Repositories
         {
             using (var con = _DB.GetConnection())
             {
-                string sql = $"insert into [User](Name, Email, Phone, Password, Details, Sex, CPF, RG, Function)" +
-                    $"values(@Name, @Email, @Phone, @Password, @Details, @Sex, @CPF, @RG, @FunvtionName)";
+                string sql = $"insert into [User](Name, Email, Phone, Password, Details, Sex, CPF, RG, FunctionName)" +
+                    $"values(@Name, @Email, @Phone, @Password, @Details, @Sex, @CPF, @RG, @FunctionName)";
                 con.Execute(sql, new
                 {
                     Name = user.Name,

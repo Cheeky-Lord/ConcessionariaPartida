@@ -1,6 +1,4 @@
-﻿using PartidaDDD.Domain.Commands.Handlers;
-using PartidaDDD.Presentation.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PartidaDDD.Presentation
+namespace PartidaDDD.Presentation.Forms
 {
-    public partial class FormMainPage : Form
+    public partial class FormAboutDevelopers : Form
     {
-        public FormMainPage()
+        public FormAboutDevelopers()
         {
             InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

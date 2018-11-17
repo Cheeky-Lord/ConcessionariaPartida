@@ -54,6 +54,18 @@
   <ItemGroup>
     <Compile Include="Configuration\MSSqlConfiguration.cs" />
     <Compile Include="ConfigureServices.cs" />
+    <Compile Include="Forms\FormAboutConcessionaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAboutConcessionaria.Designer.cs">
+      <DependentUpon>FormAboutConcessionaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAboutDevelopers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAboutDevelopers.Designer.cs">
+      <DependentUpon>FormAboutDevelopers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAboutConcessionaria.resx">
+      <DependentUpon>FormAboutConcessionaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAboutDevelopers.resx">
+      <DependentUpon>FormAboutDevelopers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMainPage.resx">
       <DependentUpon>FormMainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +118,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PartidaDDD.Domain.Commands.Inputs.RegisterCar.datasource" />
@@ -131,6 +150,10 @@
       <Name>PartidaDDD.Shared</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\fiat_chrysler_automobiles_logo.png" />
+    <None Include="Images\sign-up30x30.png" />
+    <None Include="Images\sign-up.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
