@@ -196,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 314);
+            this.ClientSize = new System.Drawing.Size(767, 439);
             this.Controls.Add(automaticLabel);
             this.Controls.Add(this.automaticCheckBox);
             this.Controls.Add(brandLabel);
@@ -212,7 +212,10 @@
             this.Controls.Add(yearLabel);
             this.Controls.Add(this.yearTextBox);
             this.Controls.Add(this.btnRegistrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormRegisterCar";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Concessionária Partida | Registrar Carro";
             this.Load += new System.EventHandler(this.FormRegisterCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.registerCarBindingSource)).EndInit();

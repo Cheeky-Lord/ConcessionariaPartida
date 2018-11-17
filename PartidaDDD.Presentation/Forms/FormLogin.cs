@@ -16,5 +16,15 @@ namespace PartidaDDD.Presentation.Forms
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FormMainPage mainPage = new FormMainPage();
+            if (emailTextBox.Text == "admin@admin.com" && passwordTextBox.Text == "123")
+            {
+                this.Hide();
+                mainPage.Show();
+            }
+        }
     }
 }

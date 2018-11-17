@@ -40,6 +40,7 @@
             System.Windows.Forms.Label sexLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterUser));
             this.cPFTextBox = new System.Windows.Forms.TextBox();
+            this.registerUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detailsTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.functionComboBox = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,6 @@
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.rGTextBox = new System.Windows.Forms.TextBox();
             this.sexComboBox = new System.Windows.Forms.ComboBox();
-            this.registerUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRegister = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -124,9 +124,9 @@
             phoneLabel.AutoSize = true;
             phoneLabel.Location = new System.Drawing.Point(333, 141);
             phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(25, 13);
+            phoneLabel.Size = new System.Drawing.Size(52, 13);
             phoneLabel.TabIndex = 14;
-            phoneLabel.Text = "Tel:";
+            phoneLabel.Text = "Telefone:";
             // 
             // rGLabel
             // 
@@ -153,6 +153,10 @@
             this.cPFTextBox.Name = "cPFTextBox";
             this.cPFTextBox.Size = new System.Drawing.Size(220, 20);
             this.cPFTextBox.TabIndex = 2;
+            // 
+            // registerUserBindingSource
+            // 
+            this.registerUserBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterUser);
             // 
             // detailsTextBox
             // 
@@ -208,7 +212,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(364, 137);
+            this.phoneTextBox.Location = new System.Drawing.Point(391, 137);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(121, 20);
             this.phoneTextBox.TabIndex = 7;
@@ -234,10 +238,6 @@
             this.sexComboBox.Name = "sexComboBox";
             this.sexComboBox.Size = new System.Drawing.Size(158, 21);
             this.sexComboBox.TabIndex = 6;
-            // 
-            // registerUserBindingSource
-            // 
-            this.registerUserBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterUser);
             // 
             // btnRegister
             // 
@@ -308,7 +308,9 @@
             this.Controls.Add(sexLabel);
             this.Controls.Add(this.sexComboBox);
             this.Controls.Add(this.btnRegister);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormRegisterUser";
             this.Text = "Concessionária Partida | Cadastrar Usuario";
             this.Load += new System.EventHandler(this.FormRegisterUser_Load);

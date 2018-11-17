@@ -27,6 +27,8 @@ namespace PartidaDDD.Presentation.Forms
         {
             var registerCar = (RegisterCar)registerCarBindingSource.Current;
             _handler.Handler(registerCar);
+            MessageBox.Show("Veículo registrado com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void FormRegisterCar_Load(object sender, EventArgs e)

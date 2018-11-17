@@ -21,6 +21,8 @@ namespace PartidaDDD.Presentation
             services.AddTransient<FormRegisterUser>();
 
             services.AddTransient<FormMainPage>();
+            services.AddTransient<FormContainer>();
+            services.AddTransient<FormLogin>();
 
             services.AddTransient<IDBConfiguration, MSSqlConfiguration>();
             services.AddSingleton<IDB, MSSqlDB>();
