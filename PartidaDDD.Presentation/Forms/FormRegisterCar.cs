@@ -1,13 +1,6 @@
 ﻿using PartidaDDD.Domain.Commands.Handlers;
 using PartidaDDD.Domain.Commands.Inputs;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PartidaDDD.Presentation.Forms
@@ -25,15 +18,73 @@ namespace PartidaDDD.Presentation.Forms
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            var registerCar = (RegisterCar)registerCarBindingSource.Current;
-            _handler.Handler(registerCar);
-            MessageBox.Show("Veículo registrado com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            CleanValidateForm();
+            bool isValid = ValidateForm();
+
+            if (isValid == true)
+            {
+                var registerCar = (RegisterCar)registerCarBindingSource.Current;
+                _handler.Handler(registerCar);
+                MessageBox.Show("Veículo registrado com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CleanForm();
+            }
         }
 
         private void FormRegisterCar_Load(object sender, EventArgs e)
         {
             registerCarBindingSource.AddNew();
+        }
+
+        private bool ValidateForm()
+        {
+            bool validated = true;
+
+            if (nameTextBox.Text.Length < 2)
+            {
+                validated = false;
+                lblValidateName.Text = "A propriedade Nome deve ter no mínimo 2 caracteres";
+            }
+            if (yearTextBox.Text.Length < 4)
+            {
+                validated = false;
+                lblValidateYear.Text = "Ano inválido";
+            }
+            if (chassisTextBox.Text.Length < 5)
+            {
+                validated = false;
+                lblValidateChassis.Text = "Chassis inválido";
+            }
+            if (doorsTextBox.Text.Length < 1)
+            {
+                validated = false;
+                lblValidateDoor.Text = "Portas inválido";
+            }
+            if (brandTextBox.Text.Length < 2)
+            {
+                validated = false;
+                lblValidateBrand.Text = "A propriedade Marca deve ter no mínimo 2 caracteres";
+            }
+
+            return validated;
+        }
+
+        private void CleanForm()
+        {
+            nameTextBox.Text = "";
+            yearTextBox.Text = "";
+            chassisTextBox.Text = "";
+            brandTextBox.Text = "";
+            hydraulicSteeringCheckBox.Checked = false;
+            automaticCheckBox.Checked = false;
+        }
+
+        private void CleanValidateForm()
+        {
+            lblValidateBrand.Text = "";
+            lblValidateChassis.Text = "";
+            lblValidateDoor.Text = "";
+            lblValidateName.Text = "";
+            lblValidateYear.Text = "";
         }
     }
 }

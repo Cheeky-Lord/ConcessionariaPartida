@@ -25,8 +25,15 @@ namespace PartidaDDD.Presentation.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            var registerUser = (RegisterUser)registerUserBindingSource.Current;
-            _handler.Handler(registerUser);
+            CleanValidationForm();
+            bool isValid = ValidateForm();
+            if (isValid == true)
+            {
+                var registerUser = (RegisterUser)registerUserBindingSource.Current;
+                _handler.Handler(registerUser);
+                MessageBox.Show("Usuário cadastrado com sucesso", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CleanFields();
+            }
         }
 
         private void FormRegisterUser_Load(object sender, EventArgs e)
@@ -34,9 +41,65 @@ namespace PartidaDDD.Presentation.Forms
             registerUserBindingSource.AddNew();
         }
 
-        private void nameLabel_Click(object sender, EventArgs e)
+        private bool ValidateForm()
         {
+            var validated = true;
 
+            if (!emailTextBox.Text.Contains("@"))
+            {
+                validated = false;
+                lblValidateEmail.Text = "E-mail inválido";
+            }
+            if (nameTextBox.Text.Length < 2)
+            {
+                validated = false;
+                lblValidateName.Text = "A propriedade Nome deve ter no mínimo 2 caracteres";
+            }
+            if (cPFTextBox.Text.Length != 11)
+            {
+                validated = false;
+                lblValidateCPF.Text = "CPF inválido";
+            }
+            if (rGTextBox.Text.Length < 7)
+            {
+                validated = false;
+                lblValidateRG.Text = "RG inválido";
+            }
+            if (passwordTextBox.Text.Length < 3)
+            {
+                validated = false;
+                lblValidatePassword.Text = "A propriedade senha deve ter no mínimo 3 caracteres";
+            }
+            if (functionComboBox == null)
+            {
+                validated = false;
+                lblValidateFunction.Text = "A propriedade Função é obrigatória";
+            }
+
+            return validated;
+        }
+
+        private void CleanValidationForm()
+        {
+            lblValidateCPF.Text = "";
+            lblValidateEmail.Text = "";
+            lblValidateFunction.Text = "";
+            lblValidateName.Text = "";
+            lblValidatePassword.Text = "";
+            lblValidateRG.Text = "";
+        }
+
+        private void CleanFields()
+        {
+            nameTextBox.Text = "";
+            cPFTextBox.Text = "";
+            passwordTextBox.Text = "";
+            emailTextBox.Text = "";
+            functionComboBox.Text = "";
+            sexComboBox.Text = "";
+            detailsTextBox.Text = "";
+            rGTextBox.Text = "";
+            phoneTextBox.Text = "";
         }
     }
 }

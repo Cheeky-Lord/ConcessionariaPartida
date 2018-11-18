@@ -29,45 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label automaticLabel;
             System.Windows.Forms.Label brandLabel;
             System.Windows.Forms.Label chassisLabel;
             System.Windows.Forms.Label doorsLabel;
-            System.Windows.Forms.Label hydraulicSteeringLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label yearLabel;
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterCar));
             this.automaticCheckBox = new System.Windows.Forms.CheckBox();
-            this.registerCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.brandTextBox = new System.Windows.Forms.TextBox();
             this.chassisTextBox = new System.Windows.Forms.TextBox();
             this.doorsTextBox = new System.Windows.Forms.TextBox();
             this.hydraulicSteeringCheckBox = new System.Windows.Forms.CheckBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.yearTextBox = new System.Windows.Forms.TextBox();
-            automaticLabel = new System.Windows.Forms.Label();
+            this.lblValidateName = new System.Windows.Forms.Label();
+            this.lblValidateYear = new System.Windows.Forms.Label();
+            this.lblValidateChassis = new System.Windows.Forms.Label();
+            this.lblValidateBrand = new System.Windows.Forms.Label();
+            this.lblValidateDoor = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.registerCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRegistrar = new System.Windows.Forms.Button();
             brandLabel = new System.Windows.Forms.Label();
             chassisLabel = new System.Windows.Forms.Label();
             doorsLabel = new System.Windows.Forms.Label();
-            hydraulicSteeringLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             yearLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerCarBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // automaticLabel
-            // 
-            automaticLabel.AutoSize = true;
-            automaticLabel.Location = new System.Drawing.Point(33, 59);
-            automaticLabel.Name = "automaticLabel";
-            automaticLabel.Size = new System.Drawing.Size(63, 13);
-            automaticLabel.TabIndex = 1;
-            automaticLabel.Text = "Automático:";
             // 
             // brandLabel
             // 
             brandLabel.AutoSize = true;
-            brandLabel.Location = new System.Drawing.Point(33, 87);
+            brandLabel.Location = new System.Drawing.Point(273, 188);
             brandLabel.Name = "brandLabel";
             brandLabel.Size = new System.Drawing.Size(40, 13);
             brandLabel.TabIndex = 3;
@@ -76,7 +72,7 @@
             // chassisLabel
             // 
             chassisLabel.AutoSize = true;
-            chassisLabel.Location = new System.Drawing.Point(33, 113);
+            chassisLabel.Location = new System.Drawing.Point(103, 188);
             chassisLabel.Name = "chassisLabel";
             chassisLabel.Size = new System.Drawing.Size(46, 13);
             chassisLabel.TabIndex = 5;
@@ -85,25 +81,16 @@
             // doorsLabel
             // 
             doorsLabel.AutoSize = true;
-            doorsLabel.Location = new System.Drawing.Point(33, 139);
+            doorsLabel.Location = new System.Drawing.Point(395, 233);
             doorsLabel.Name = "doorsLabel";
             doorsLabel.Size = new System.Drawing.Size(40, 13);
             doorsLabel.TabIndex = 7;
             doorsLabel.Text = "Portas:";
             // 
-            // hydraulicSteeringLabel
-            // 
-            hydraulicSteeringLabel.AutoSize = true;
-            hydraulicSteeringLabel.Location = new System.Drawing.Point(33, 167);
-            hydraulicSteeringLabel.Name = "hydraulicSteeringLabel";
-            hydraulicSteeringLabel.Size = new System.Drawing.Size(97, 13);
-            hydraulicSteeringLabel.TabIndex = 9;
-            hydraulicSteeringLabel.Text = "Direção Hidráulica:";
-            // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(33, 195);
+            nameLabel.Location = new System.Drawing.Point(90, 128);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 11;
@@ -112,92 +99,178 @@
             // yearLabel
             // 
             yearLabel.AutoSize = true;
-            yearLabel.Location = new System.Drawing.Point(33, 221);
+            yearLabel.Location = new System.Drawing.Point(364, 128);
             yearLabel.Name = "yearLabel";
             yearLabel.Size = new System.Drawing.Size(29, 13);
             yearLabel.TabIndex = 13;
             yearLabel.Text = "Ano:";
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Location = new System.Drawing.Point(148, 254);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 0;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // automaticCheckBox
             // 
             this.automaticCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.registerCarBindingSource, "Automatic", true));
-            this.automaticCheckBox.Location = new System.Drawing.Point(135, 54);
+            this.automaticCheckBox.Location = new System.Drawing.Point(256, 228);
             this.automaticCheckBox.Name = "automaticCheckBox";
             this.automaticCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.automaticCheckBox.TabIndex = 2;
+            this.automaticCheckBox.TabIndex = 6;
             this.automaticCheckBox.Text = "automático";
             this.automaticCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // registerCarBindingSource
-            // 
-            this.registerCarBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterCar);
             // 
             // brandTextBox
             // 
             this.brandTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Brand", true));
-            this.brandTextBox.Location = new System.Drawing.Point(135, 84);
+            this.brandTextBox.Location = new System.Drawing.Point(319, 185);
             this.brandTextBox.Name = "brandTextBox";
-            this.brandTextBox.Size = new System.Drawing.Size(104, 20);
+            this.brandTextBox.Size = new System.Drawing.Size(184, 20);
             this.brandTextBox.TabIndex = 4;
             // 
             // chassisTextBox
             // 
             this.chassisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Chassis", true));
-            this.chassisTextBox.Location = new System.Drawing.Point(135, 110);
+            this.chassisTextBox.Location = new System.Drawing.Point(155, 185);
             this.chassisTextBox.Name = "chassisTextBox";
             this.chassisTextBox.Size = new System.Drawing.Size(104, 20);
-            this.chassisTextBox.TabIndex = 6;
+            this.chassisTextBox.TabIndex = 3;
             // 
             // doorsTextBox
             // 
             this.doorsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Doors", true));
-            this.doorsTextBox.Location = new System.Drawing.Point(135, 136);
+            this.doorsTextBox.Location = new System.Drawing.Point(441, 230);
             this.doorsTextBox.Name = "doorsTextBox";
-            this.doorsTextBox.Size = new System.Drawing.Size(104, 20);
-            this.doorsTextBox.TabIndex = 8;
+            this.doorsTextBox.Size = new System.Drawing.Size(31, 20);
+            this.doorsTextBox.TabIndex = 7;
             // 
             // hydraulicSteeringCheckBox
             // 
             this.hydraulicSteeringCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.registerCarBindingSource, "HydraulicSteering", true));
-            this.hydraulicSteeringCheckBox.Location = new System.Drawing.Point(135, 162);
+            this.hydraulicSteeringCheckBox.Location = new System.Drawing.Point(106, 228);
             this.hydraulicSteeringCheckBox.Name = "hydraulicSteeringCheckBox";
             this.hydraulicSteeringCheckBox.Size = new System.Drawing.Size(120, 24);
-            this.hydraulicSteeringCheckBox.TabIndex = 10;
+            this.hydraulicSteeringCheckBox.TabIndex = 5;
             this.hydraulicSteeringCheckBox.Text = "direção hidráulica";
             this.hydraulicSteeringCheckBox.UseVisualStyleBackColor = true;
             // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(135, 192);
+            this.nameTextBox.Location = new System.Drawing.Point(134, 125);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(104, 20);
-            this.nameTextBox.TabIndex = 12;
+            this.nameTextBox.Size = new System.Drawing.Size(201, 20);
+            this.nameTextBox.TabIndex = 1;
             // 
             // yearTextBox
             // 
             this.yearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Year", true));
-            this.yearTextBox.Location = new System.Drawing.Point(135, 218);
+            this.yearTextBox.Location = new System.Drawing.Point(399, 125);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(104, 20);
-            this.yearTextBox.TabIndex = 14;
+            this.yearTextBox.TabIndex = 2;
+            // 
+            // lblValidateName
+            // 
+            this.lblValidateName.AutoSize = true;
+            this.lblValidateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.lblValidateName.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateName.Location = new System.Drawing.Point(131, 148);
+            this.lblValidateName.Name = "lblValidateName";
+            this.lblValidateName.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateName.TabIndex = 14;
+            // 
+            // lblValidateYear
+            // 
+            this.lblValidateYear.AutoSize = true;
+            this.lblValidateYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.lblValidateYear.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateYear.Location = new System.Drawing.Point(395, 148);
+            this.lblValidateYear.Name = "lblValidateYear";
+            this.lblValidateYear.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateYear.TabIndex = 15;
+            // 
+            // lblValidateChassis
+            // 
+            this.lblValidateChassis.AutoSize = true;
+            this.lblValidateChassis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.lblValidateChassis.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateChassis.Location = new System.Drawing.Point(152, 208);
+            this.lblValidateChassis.Name = "lblValidateChassis";
+            this.lblValidateChassis.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateChassis.TabIndex = 16;
+            // 
+            // lblValidateBrand
+            // 
+            this.lblValidateBrand.AutoSize = true;
+            this.lblValidateBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.lblValidateBrand.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateBrand.Location = new System.Drawing.Point(316, 208);
+            this.lblValidateBrand.Name = "lblValidateBrand";
+            this.lblValidateBrand.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateBrand.TabIndex = 17;
+            // 
+            // lblValidateDoor
+            // 
+            this.lblValidateDoor.AutoSize = true;
+            this.lblValidateDoor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.lblValidateDoor.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateDoor.Location = new System.Drawing.Point(438, 253);
+            this.lblValidateDoor.Name = "lblValidateDoor";
+            this.lblValidateDoor.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateDoor.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PartidaDDD.Presentation.Properties.Resources.fiat_chrysler_automobiles_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(106, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(536, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::PartidaDDD.Presentation.Properties.Resources.Edit;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(524, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 45);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Editar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // registerCarBindingSource
+            // 
+            this.registerCarBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterCar);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.White;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Image = global::PartidaDDD.Presentation.Properties.Resources.sign_up30x30;
+            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrar.Location = new System.Drawing.Point(524, 112);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(118, 45);
+            this.btnRegistrar.TabIndex = 8;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // FormRegisterCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 439);
-            this.Controls.Add(automaticLabel);
+            this.ClientSize = new System.Drawing.Size(740, 295);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblValidateDoor);
+            this.Controls.Add(this.lblValidateBrand);
+            this.Controls.Add(this.lblValidateChassis);
+            this.Controls.Add(this.lblValidateYear);
+            this.Controls.Add(this.lblValidateName);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.automaticCheckBox);
             this.Controls.Add(brandLabel);
             this.Controls.Add(this.brandTextBox);
@@ -205,7 +278,6 @@
             this.Controls.Add(this.chassisTextBox);
             this.Controls.Add(doorsLabel);
             this.Controls.Add(this.doorsTextBox);
-            this.Controls.Add(hydraulicSteeringLabel);
             this.Controls.Add(this.hydraulicSteeringCheckBox);
             this.Controls.Add(nameLabel);
             this.Controls.Add(this.nameTextBox);
@@ -213,11 +285,13 @@
             this.Controls.Add(this.yearTextBox);
             this.Controls.Add(this.btnRegistrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormRegisterCar";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Concessionária Partida | Registrar Carro";
             this.Load += new System.EventHandler(this.FormRegisterCar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerCarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,5 +309,12 @@
         private System.Windows.Forms.CheckBox hydraulicSteeringCheckBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox yearTextBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblValidateName;
+        private System.Windows.Forms.Label lblValidateYear;
+        private System.Windows.Forms.Label lblValidateChassis;
+        private System.Windows.Forms.Label lblValidateBrand;
+        private System.Windows.Forms.Label lblValidateDoor;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

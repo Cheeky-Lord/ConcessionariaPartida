@@ -160,6 +160,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\Edit.png" />
+    <None Include="Images\delete_286553.png" />
     <Content Include="Images\fiat_chrysler_automobiles_logo.png" />
     <None Include="Images\sign-up30x30.png" />
     <None Include="Images\sign-up.png" />

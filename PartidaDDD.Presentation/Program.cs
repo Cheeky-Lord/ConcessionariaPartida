@@ -18,7 +18,7 @@ namespace PartidaDDD.Presentation
 
             var services = ConfigureServices.Configure(new ServiceCollection());
             var prov = services.BuildServiceProvider();
-            var form = prov.GetRequiredService<FormLogin>();
+            var form = prov.GetRequiredService<FormRegisterCar>();
             Application.Run(form);
         }
     }
