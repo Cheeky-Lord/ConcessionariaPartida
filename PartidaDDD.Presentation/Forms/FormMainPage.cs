@@ -14,17 +14,23 @@ namespace PartidaDDD.Presentation
 {
     public partial class FormMainPage : Form
     {
-        private CarHandler handler;
+        private readonly FormRegisterCar _registerCar;
+        private readonly FormRegisterUser _registerUser;
+        private readonly FormRegisterCustomer _registerCustomer;
 
-        public FormMainPage()
+        public FormMainPage(FormRegisterCar registerCar, FormRegisterUser registerUser, FormRegisterCustomer registerCustomer)
         {
+            _registerCar = registerCar;
+            _registerUser = registerUser;
+            _registerCustomer = registerCustomer;
+
             InitializeComponent();
         }
 
         private void concessionáriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAboutConcessionaria concessionaria = new FormAboutConcessionaria();
-            concessionaria.Show();
+            concessionaria.ShowDialog();
         }
 
         private void logoutEFecharToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,13 +41,22 @@ namespace PartidaDDD.Presentation
         private void desenvolvedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormAboutDevelopers developers = new FormAboutDevelopers();
-            developers.Show();
+            developers.ShowDialog();
         }
 
         private void btnNewVehicle_Click(object sender, EventArgs e)
         {
-            FormRegisterCar registerCar = new FormRegisterCar(handler);
-            registerCar.Show();
+            _registerCar.ShowDialog();
+        }
+
+        private void btnRegisterUser_Click(object sender, EventArgs e)
+        {
+            _registerUser.ShowDialog();
+        }
+
+        private void btnRegisterCustomer_Click(object sender, EventArgs e)
+        {
+            _registerCustomer.ShowDialog();
         }
     }
 }

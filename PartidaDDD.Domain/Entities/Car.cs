@@ -9,13 +9,15 @@ namespace PartidaDDD.Domain.Entities
         public string Brand { get; private set; }
         public Factory Factory { get; private set; }
         public int Year { get; private set; }
+        public string Image { get; private set; }
 
-        public Car(string name, string brand, Factory factory, int year)
+        public Car(string name, string brand, Factory factory, int year, string image)
         {
             Name = name;
             Brand = brand;
             Factory = factory;
             Year = year;
+            Image = image;
         }
     }
 }

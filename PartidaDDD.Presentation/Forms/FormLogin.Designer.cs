@@ -111,8 +111,10 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concessionária Partida | Login";
             ((System.ComponentModel.ISupportInitialize)(this.registerUserBindingSource)).EndInit();
             this.ResumeLayout(false);

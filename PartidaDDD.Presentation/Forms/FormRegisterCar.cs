@@ -1,6 +1,7 @@
 ﻿using PartidaDDD.Domain.Commands.Handlers;
 using PartidaDDD.Domain.Commands.Inputs;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace PartidaDDD.Presentation.Forms
@@ -85,6 +86,23 @@ namespace PartidaDDD.Presentation.Forms
             lblValidateDoor.Text = "";
             lblValidateName.Text = "";
             lblValidateYear.Text = "";
+        }
+
+        private void btnLoadImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdImage = new OpenFileDialog();
+            ofdImage.Title = "Selecione a imagem";
+
+            if (ofdImage.ShowDialog() == DialogResult.OK)
+            {
+                imageTextBox.Text = ofdImage.FileName;
+            }
+            imageTextBox.Text = string.Empty;
+        }
+
+        private void CopyImage()
+        {
+
         }
     }
 }

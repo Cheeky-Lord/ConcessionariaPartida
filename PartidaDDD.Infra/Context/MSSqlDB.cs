@@ -9,6 +9,9 @@ namespace PartidaDDD.Infra.Context
         private SqlConnection DB;
         private string ConnectionString;
 
+        // SQLite
+        private SQLiteConnection sqliteCon;
+
         public MSSqlDB(IDBConfiguration config)
         {
             ConnectionString = config.ConnectionString;
@@ -24,6 +27,8 @@ namespace PartidaDDD.Infra.Context
         {
             DB = new SqlConnection(ConnectionString);
             return DB;
+            //sqliteCon = new SQLiteConnection(ConnectionString);
+            //return sqliteCon;
         }
     }
 }

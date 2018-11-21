@@ -49,21 +49,25 @@
             this.lblValidateDoor = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.registerCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.pbxCarImage = new System.Windows.Forms.PictureBox();
+            this.btnLoadImage = new System.Windows.Forms.Button();
+            this.registerCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imageTextBox = new System.Windows.Forms.TextBox();
             brandLabel = new System.Windows.Forms.Label();
             chassisLabel = new System.Windows.Forms.Label();
             doorsLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             yearLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCarImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerCarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // brandLabel
             // 
             brandLabel.AutoSize = true;
-            brandLabel.Location = new System.Drawing.Point(273, 188);
+            brandLabel.Location = new System.Drawing.Point(202, 188);
             brandLabel.Name = "brandLabel";
             brandLabel.Size = new System.Drawing.Size(40, 13);
             brandLabel.TabIndex = 3;
@@ -72,7 +76,7 @@
             // chassisLabel
             // 
             chassisLabel.AutoSize = true;
-            chassisLabel.Location = new System.Drawing.Point(103, 188);
+            chassisLabel.Location = new System.Drawing.Point(32, 188);
             chassisLabel.Name = "chassisLabel";
             chassisLabel.Size = new System.Drawing.Size(46, 13);
             chassisLabel.TabIndex = 5;
@@ -81,7 +85,7 @@
             // doorsLabel
             // 
             doorsLabel.AutoSize = true;
-            doorsLabel.Location = new System.Drawing.Point(395, 233);
+            doorsLabel.Location = new System.Drawing.Point(324, 233);
             doorsLabel.Name = "doorsLabel";
             doorsLabel.Size = new System.Drawing.Size(40, 13);
             doorsLabel.TabIndex = 7;
@@ -90,7 +94,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(90, 128);
+            nameLabel.Location = new System.Drawing.Point(19, 128);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(38, 13);
             nameLabel.TabIndex = 11;
@@ -99,7 +103,7 @@
             // yearLabel
             // 
             yearLabel.AutoSize = true;
-            yearLabel.Location = new System.Drawing.Point(364, 128);
+            yearLabel.Location = new System.Drawing.Point(293, 128);
             yearLabel.Name = "yearLabel";
             yearLabel.Size = new System.Drawing.Size(29, 13);
             yearLabel.TabIndex = 13;
@@ -108,7 +112,7 @@
             // automaticCheckBox
             // 
             this.automaticCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.registerCarBindingSource, "Automatic", true));
-            this.automaticCheckBox.Location = new System.Drawing.Point(256, 228);
+            this.automaticCheckBox.Location = new System.Drawing.Point(185, 228);
             this.automaticCheckBox.Name = "automaticCheckBox";
             this.automaticCheckBox.Size = new System.Drawing.Size(104, 24);
             this.automaticCheckBox.TabIndex = 6;
@@ -118,7 +122,7 @@
             // brandTextBox
             // 
             this.brandTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Brand", true));
-            this.brandTextBox.Location = new System.Drawing.Point(319, 185);
+            this.brandTextBox.Location = new System.Drawing.Point(248, 185);
             this.brandTextBox.Name = "brandTextBox";
             this.brandTextBox.Size = new System.Drawing.Size(184, 20);
             this.brandTextBox.TabIndex = 4;
@@ -126,7 +130,7 @@
             // chassisTextBox
             // 
             this.chassisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Chassis", true));
-            this.chassisTextBox.Location = new System.Drawing.Point(155, 185);
+            this.chassisTextBox.Location = new System.Drawing.Point(84, 185);
             this.chassisTextBox.Name = "chassisTextBox";
             this.chassisTextBox.Size = new System.Drawing.Size(104, 20);
             this.chassisTextBox.TabIndex = 3;
@@ -134,7 +138,7 @@
             // doorsTextBox
             // 
             this.doorsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Doors", true));
-            this.doorsTextBox.Location = new System.Drawing.Point(441, 230);
+            this.doorsTextBox.Location = new System.Drawing.Point(370, 230);
             this.doorsTextBox.Name = "doorsTextBox";
             this.doorsTextBox.Size = new System.Drawing.Size(31, 20);
             this.doorsTextBox.TabIndex = 7;
@@ -142,7 +146,7 @@
             // hydraulicSteeringCheckBox
             // 
             this.hydraulicSteeringCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.registerCarBindingSource, "HydraulicSteering", true));
-            this.hydraulicSteeringCheckBox.Location = new System.Drawing.Point(106, 228);
+            this.hydraulicSteeringCheckBox.Location = new System.Drawing.Point(35, 228);
             this.hydraulicSteeringCheckBox.Name = "hydraulicSteeringCheckBox";
             this.hydraulicSteeringCheckBox.Size = new System.Drawing.Size(120, 24);
             this.hydraulicSteeringCheckBox.TabIndex = 5;
@@ -152,7 +156,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(134, 125);
+            this.nameTextBox.Location = new System.Drawing.Point(63, 125);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(201, 20);
             this.nameTextBox.TabIndex = 1;
@@ -160,7 +164,7 @@
             // yearTextBox
             // 
             this.yearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Year", true));
-            this.yearTextBox.Location = new System.Drawing.Point(399, 125);
+            this.yearTextBox.Location = new System.Drawing.Point(328, 125);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(104, 20);
             this.yearTextBox.TabIndex = 2;
@@ -170,7 +174,7 @@
             this.lblValidateName.AutoSize = true;
             this.lblValidateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateName.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateName.Location = new System.Drawing.Point(131, 148);
+            this.lblValidateName.Location = new System.Drawing.Point(60, 148);
             this.lblValidateName.Name = "lblValidateName";
             this.lblValidateName.Size = new System.Drawing.Size(0, 13);
             this.lblValidateName.TabIndex = 14;
@@ -180,7 +184,7 @@
             this.lblValidateYear.AutoSize = true;
             this.lblValidateYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateYear.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateYear.Location = new System.Drawing.Point(395, 148);
+            this.lblValidateYear.Location = new System.Drawing.Point(324, 148);
             this.lblValidateYear.Name = "lblValidateYear";
             this.lblValidateYear.Size = new System.Drawing.Size(0, 13);
             this.lblValidateYear.TabIndex = 15;
@@ -190,7 +194,7 @@
             this.lblValidateChassis.AutoSize = true;
             this.lblValidateChassis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateChassis.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateChassis.Location = new System.Drawing.Point(152, 208);
+            this.lblValidateChassis.Location = new System.Drawing.Point(81, 208);
             this.lblValidateChassis.Name = "lblValidateChassis";
             this.lblValidateChassis.Size = new System.Drawing.Size(0, 13);
             this.lblValidateChassis.TabIndex = 16;
@@ -200,7 +204,7 @@
             this.lblValidateBrand.AutoSize = true;
             this.lblValidateBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateBrand.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateBrand.Location = new System.Drawing.Point(316, 208);
+            this.lblValidateBrand.Location = new System.Drawing.Point(245, 208);
             this.lblValidateBrand.Name = "lblValidateBrand";
             this.lblValidateBrand.Size = new System.Drawing.Size(0, 13);
             this.lblValidateBrand.TabIndex = 17;
@@ -210,7 +214,7 @@
             this.lblValidateDoor.AutoSize = true;
             this.lblValidateDoor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateDoor.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateDoor.Location = new System.Drawing.Point(438, 253);
+            this.lblValidateDoor.Location = new System.Drawing.Point(367, 253);
             this.lblValidateDoor.Name = "lblValidateDoor";
             this.lblValidateDoor.Size = new System.Drawing.Size(0, 13);
             this.lblValidateDoor.TabIndex = 18;
@@ -218,9 +222,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PartidaDDD.Presentation.Properties.Resources.fiat_chrysler_automobiles_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(536, 71);
+            this.pictureBox1.Size = new System.Drawing.Size(716, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -232,7 +236,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::PartidaDDD.Presentation.Properties.Resources.Edit;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(524, 172);
+            this.button1.Location = new System.Drawing.Point(610, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 45);
             this.button1.TabIndex = 9;
@@ -240,17 +244,13 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // registerCarBindingSource
-            // 
-            this.registerCarBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterCar);
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Image = global::PartidaDDD.Presentation.Properties.Resources.sign_up30x30;
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistrar.Location = new System.Drawing.Point(524, 112);
+            this.btnRegistrar.Location = new System.Drawing.Point(610, 112);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(118, 45);
             this.btnRegistrar.TabIndex = 8;
@@ -259,11 +259,47 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // pbxCarImage
+            // 
+            this.pbxCarImage.BackColor = System.Drawing.SystemColors.Control;
+            this.pbxCarImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxCarImage.Location = new System.Drawing.Point(444, 112);
+            this.pbxCarImage.Name = "pbxCarImage";
+            this.pbxCarImage.Size = new System.Drawing.Size(160, 126);
+            this.pbxCarImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxCarImage.TabIndex = 20;
+            this.pbxCarImage.TabStop = false;
+            // 
+            // btnLoadImage
+            // 
+            this.btnLoadImage.Location = new System.Drawing.Point(559, 244);
+            this.btnLoadImage.Name = "btnLoadImage";
+            this.btnLoadImage.Size = new System.Drawing.Size(45, 23);
+            this.btnLoadImage.TabIndex = 21;
+            this.btnLoadImage.Text = "...";
+            this.btnLoadImage.UseVisualStyleBackColor = true;
+            this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
+            // 
+            // registerCarBindingSource
+            // 
+            this.registerCarBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterCar);
+            // 
+            // imageTextBox
+            // 
+            this.imageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCarBindingSource, "Image", true));
+            this.imageTextBox.Location = new System.Drawing.Point(444, 247);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.Size = new System.Drawing.Size(100, 20);
+            this.imageTextBox.TabIndex = 23;
+            // 
             // FormRegisterCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 295);
+            this.ClientSize = new System.Drawing.Size(748, 295);
+            this.Controls.Add(this.imageTextBox);
+            this.Controls.Add(this.btnLoadImage);
+            this.Controls.Add(this.pbxCarImage);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblValidateDoor);
             this.Controls.Add(this.lblValidateBrand);
@@ -292,6 +328,7 @@
             this.Text = "Concessionária Partida | Registrar Carro";
             this.Load += new System.EventHandler(this.FormRegisterCar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCarImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registerCarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,5 +353,8 @@
         private System.Windows.Forms.Label lblValidateBrand;
         private System.Windows.Forms.Label lblValidateDoor;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxCarImage;
+        private System.Windows.Forms.Button btnLoadImage;
+        private System.Windows.Forms.TextBox imageTextBox;
     }
 }

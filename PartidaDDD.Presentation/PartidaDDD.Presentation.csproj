@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +44,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -90,11 +96,23 @@
     <Compile Include="Forms\FormRegisterCar.Designer.cs">
       <DependentUpon>FormRegisterCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormRegisterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRegisterCustomer.Designer.cs">
+      <DependentUpon>FormRegisterCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormRegisterUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormRegisterUser.Designer.cs">
       <DependentUpon>FormRegisterUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormShowRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormShowRoom.Designer.cs">
+      <DependentUpon>FormShowRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,8 +134,14 @@
     <EmbeddedResource Include="Forms\FormRegisterCar.resx">
       <DependentUpon>FormRegisterCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRegisterCustomer.resx">
+      <DependentUpon>FormRegisterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormRegisterUser.resx">
       <DependentUpon>FormRegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormShowRoom.resx">
+      <DependentUpon>FormShowRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +155,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PartidaDDD.Domain.Commands.Inputs.RegisterCar.datasource" />
+    <None Include="Properties\DataSources\PartidaDDD.Domain.Commands.Inputs.RegisterCustomer.datasource" />
     <None Include="Properties\DataSources\PartidaDDD.Domain.Commands.Inputs.RegisterUser.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,9 +187,17 @@
   <ItemGroup>
     <None Include="Images\Edit.png" />
     <None Include="Images\delete_286553.png" />
+    <None Include="Images\estoque.PNG" />
     <Content Include="Images\fiat_chrysler_automobiles_logo.png" />
     <None Include="Images\sign-up30x30.png" />
     <None Include="Images\sign-up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
 </Project>

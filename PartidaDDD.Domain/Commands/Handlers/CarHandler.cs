@@ -20,7 +20,7 @@ namespace PartidaDDD.Domain.Commands.Handlers
         {
             Factory factory = new Factory(command.Chassis, command.Doors, command.HydraulicSteering, command.Automatic);
 
-            Car car = new Car(command.Name, command.Brand, factory, command.Year);
+            Car car = new Car(command.Name, command.Brand, factory, command.Year, command.Image);
 
             // Salva no banco.
             _carRepository.NewCar(car);

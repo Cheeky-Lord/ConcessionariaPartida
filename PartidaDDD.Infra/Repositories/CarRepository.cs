@@ -4,9 +4,6 @@ using PartidaDDD.Infra.Context;
 using System;
 using System.Collections.Generic;
 using Dapper;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PartidaDDD.Infra.Repositories
 {
