@@ -25,10 +25,10 @@ namespace PartidaDDD.Infra.Context
 
         public IDbConnection GetConnection()
         {
-            DB = new SqlConnection(ConnectionString);
-            return DB;
-            //sqliteCon = new SQLiteConnection(ConnectionString);
-            //return sqliteCon;
+            //DB = new SqlConnection(ConnectionString);
+            //return DB;
+            sqliteCon = new SQLiteConnection(ConnectionString);
+            return sqliteCon;
         }
     }
 }

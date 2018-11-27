@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label cPFLabel;
             System.Windows.Forms.Label detailsLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label functionLabel;
@@ -38,30 +37,30 @@
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label rGLabel;
             System.Windows.Forms.Label sexLabel;
+            System.Windows.Forms.Label cPFLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterUser));
-            this.cPFTextBox = new System.Windows.Forms.TextBox();
             this.registerUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detailsTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.functionComboBox = new System.Windows.Forms.ComboBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.rGTextBox = new System.Windows.Forms.TextBox();
             this.sexComboBox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblValidateName = new System.Windows.Forms.Label();
-            this.lblValidateCPF = new System.Windows.Forms.Label();
             this.lblValidatePassword = new System.Windows.Forms.Label();
             this.lblValidateEmail = new System.Windows.Forms.Label();
             this.lblValidateRG = new System.Windows.Forms.Label();
             this.lblValidateFunction = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.phoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.lblValidateCPF = new System.Windows.Forms.Label();
+            this.cPFMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            cPFLabel = new System.Windows.Forms.Label();
             detailsLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             functionLabel = new System.Windows.Forms.Label();
@@ -70,20 +69,12 @@
             phoneLabel = new System.Windows.Forms.Label();
             rGLabel = new System.Windows.Forms.Label();
             sexLabel = new System.Windows.Forms.Label();
+            cPFLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.registerUserBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cPFLabel
-            // 
-            cPFLabel.AutoSize = true;
-            cPFLabel.Location = new System.Drawing.Point(20, 117);
-            cPFLabel.Name = "cPFLabel";
-            cPFLabel.Size = new System.Drawing.Size(30, 13);
-            cPFLabel.TabIndex = 2;
-            cPFLabel.Text = "CPF:";
             // 
             // detailsLabel
             // 
@@ -106,7 +97,7 @@
             // functionLabel
             // 
             functionLabel.AutoSize = true;
-            functionLabel.Location = new System.Drawing.Point(307, 117);
+            functionLabel.Location = new System.Drawing.Point(307, 139);
             functionLabel.Name = "functionLabel";
             functionLabel.Size = new System.Drawing.Size(46, 13);
             functionLabel.TabIndex = 8;
@@ -124,7 +115,7 @@
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new System.Drawing.Point(11, 157);
+            passwordLabel.Location = new System.Drawing.Point(14, 204);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(41, 13);
             passwordLabel.TabIndex = 12;
@@ -133,7 +124,7 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(328, 161);
+            phoneLabel.Location = new System.Drawing.Point(331, 208);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(52, 13);
             phoneLabel.TabIndex = 14;
@@ -142,7 +133,7 @@
             // rGLabel
             // 
             rGLabel.AutoSize = true;
-            rGLabel.Location = new System.Drawing.Point(556, 161);
+            rGLabel.Location = new System.Drawing.Point(559, 208);
             rGLabel.Name = "rGLabel";
             rGLabel.Size = new System.Drawing.Size(26, 13);
             rGLabel.TabIndex = 16;
@@ -151,19 +142,20 @@
             // sexLabel
             // 
             sexLabel.AutoSize = true;
-            sexLabel.Location = new System.Drawing.Point(511, 117);
+            sexLabel.Location = new System.Drawing.Point(511, 139);
             sexLabel.Name = "sexLabel";
             sexLabel.Size = new System.Drawing.Size(34, 13);
             sexLabel.TabIndex = 18;
             sexLabel.Text = "Sexo:";
             // 
-            // cPFTextBox
+            // cPFLabel
             // 
-            this.cPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "CPF", true));
-            this.cPFTextBox.Location = new System.Drawing.Point(56, 110);
-            this.cPFTextBox.Name = "cPFTextBox";
-            this.cPFTextBox.Size = new System.Drawing.Size(220, 20);
-            this.cPFTextBox.TabIndex = 2;
+            cPFLabel.AutoSize = true;
+            cPFLabel.Location = new System.Drawing.Point(20, 135);
+            cPFLabel.Name = "cPFLabel";
+            cPFLabel.Size = new System.Drawing.Size(30, 13);
+            cPFLabel.TabIndex = 26;
+            cPFLabel.Text = "CPF:";
             // 
             // registerUserBindingSource
             // 
@@ -184,7 +176,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(359, 64);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(350, 20);
-            this.emailTextBox.TabIndex = 4;
+            this.emailTextBox.TabIndex = 2;
             // 
             // functionComboBox
             // 
@@ -198,40 +190,32 @@
             "CEO",
             "CTO",
             "Caixa"});
-            this.functionComboBox.Location = new System.Drawing.Point(359, 110);
+            this.functionComboBox.Location = new System.Drawing.Point(359, 132);
             this.functionComboBox.Name = "functionComboBox";
             this.functionComboBox.Size = new System.Drawing.Size(121, 21);
-            this.functionComboBox.TabIndex = 5;
+            this.functionComboBox.TabIndex = 4;
             // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "Name", true));
             this.nameTextBox.Location = new System.Drawing.Point(56, 64);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(221, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(219, 20);
             this.nameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "Password", true));
-            this.passwordTextBox.Location = new System.Drawing.Point(56, 154);
+            this.passwordTextBox.Location = new System.Drawing.Point(59, 201);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(216, 20);
-            this.passwordTextBox.TabIndex = 3;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(386, 157);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(121, 20);
-            this.phoneTextBox.TabIndex = 7;
+            this.passwordTextBox.TabIndex = 6;
             // 
             // rGTextBox
             // 
             this.rGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "RG", true));
-            this.rGTextBox.Location = new System.Drawing.Point(588, 158);
+            this.rGTextBox.Location = new System.Drawing.Point(591, 205);
             this.rGTextBox.Name = "rGTextBox";
             this.rGTextBox.Size = new System.Drawing.Size(121, 20);
             this.rGTextBox.TabIndex = 8;
@@ -245,10 +229,10 @@
             this.sexComboBox.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.sexComboBox.Location = new System.Drawing.Point(551, 114);
+            this.sexComboBox.Location = new System.Drawing.Point(551, 136);
             this.sexComboBox.Name = "sexComboBox";
             this.sexComboBox.Size = new System.Drawing.Size(158, 21);
-            this.sexComboBox.TabIndex = 6;
+            this.sexComboBox.TabIndex = 5;
             // 
             // button2
             // 
@@ -261,7 +245,7 @@
             this.button2.Location = new System.Drawing.Point(751, 180);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 58);
-            this.button2.TabIndex = 20;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Deletar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
@@ -277,7 +261,7 @@
             this.button1.Location = new System.Drawing.Point(751, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 58);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Editar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
@@ -305,28 +289,20 @@
             this.lblValidateName.ForeColor = System.Drawing.Color.Red;
             this.lblValidateName.Location = new System.Drawing.Point(53, 87);
             this.lblValidateName.Name = "lblValidateName";
-            this.lblValidateName.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateName.Size = new System.Drawing.Size(33, 13);
             this.lblValidateName.TabIndex = 21;
-            // 
-            // lblValidateCPF
-            // 
-            this.lblValidateCPF.AutoSize = true;
-            this.lblValidateCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.lblValidateCPF.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateCPF.Location = new System.Drawing.Point(53, 133);
-            this.lblValidateCPF.Name = "lblValidateCPF";
-            this.lblValidateCPF.Size = new System.Drawing.Size(0, 13);
-            this.lblValidateCPF.TabIndex = 22;
+            this.lblValidateName.Text = "name";
             // 
             // lblValidatePassword
             // 
             this.lblValidatePassword.AutoSize = true;
             this.lblValidatePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidatePassword.ForeColor = System.Drawing.Color.Red;
-            this.lblValidatePassword.Location = new System.Drawing.Point(53, 177);
+            this.lblValidatePassword.Location = new System.Drawing.Point(56, 224);
             this.lblValidatePassword.Name = "lblValidatePassword";
-            this.lblValidatePassword.Size = new System.Drawing.Size(0, 13);
+            this.lblValidatePassword.Size = new System.Drawing.Size(52, 13);
             this.lblValidatePassword.TabIndex = 23;
+            this.lblValidatePassword.Text = "password";
             // 
             // lblValidateEmail
             // 
@@ -335,28 +311,31 @@
             this.lblValidateEmail.ForeColor = System.Drawing.Color.Red;
             this.lblValidateEmail.Location = new System.Drawing.Point(356, 87);
             this.lblValidateEmail.Name = "lblValidateEmail";
-            this.lblValidateEmail.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateEmail.Size = new System.Drawing.Size(34, 13);
             this.lblValidateEmail.TabIndex = 24;
+            this.lblValidateEmail.Text = "e-mail";
             // 
             // lblValidateRG
             // 
             this.lblValidateRG.AutoSize = true;
             this.lblValidateRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateRG.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateRG.Location = new System.Drawing.Point(585, 181);
+            this.lblValidateRG.Location = new System.Drawing.Point(588, 228);
             this.lblValidateRG.Name = "lblValidateRG";
-            this.lblValidateRG.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateRG.Size = new System.Drawing.Size(16, 13);
             this.lblValidateRG.TabIndex = 25;
+            this.lblValidateRG.Text = "rg";
             // 
             // lblValidateFunction
             // 
             this.lblValidateFunction.AutoSize = true;
             this.lblValidateFunction.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblValidateFunction.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateFunction.Location = new System.Drawing.Point(356, 134);
+            this.lblValidateFunction.Location = new System.Drawing.Point(356, 156);
             this.lblValidateFunction.Name = "lblValidateFunction";
-            this.lblValidateFunction.Size = new System.Drawing.Size(0, 13);
+            this.lblValidateFunction.Size = new System.Drawing.Size(71, 13);
             this.lblValidateFunction.TabIndex = 26;
+            this.lblValidateFunction.Text = "functionName";
             // 
             // tabControl1
             // 
@@ -370,6 +349,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.phoneMaskedTextBox);
+            this.tabPage1.Controls.Add(this.lblValidateCPF);
+            this.tabPage1.Controls.Add(cPFLabel);
+            this.tabPage1.Controls.Add(this.cPFMaskedTextBox);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(this.lblValidateFunction);
             this.tabPage1.Controls.Add(this.sexComboBox);
@@ -379,15 +363,11 @@
             this.tabPage1.Controls.Add(this.rGTextBox);
             this.tabPage1.Controls.Add(this.lblValidatePassword);
             this.tabPage1.Controls.Add(rGLabel);
-            this.tabPage1.Controls.Add(this.lblValidateCPF);
-            this.tabPage1.Controls.Add(this.phoneTextBox);
             this.tabPage1.Controls.Add(this.lblValidateName);
             this.tabPage1.Controls.Add(phoneLabel);
             this.tabPage1.Controls.Add(this.passwordTextBox);
             this.tabPage1.Controls.Add(passwordLabel);
-            this.tabPage1.Controls.Add(cPFLabel);
             this.tabPage1.Controls.Add(nameLabel);
-            this.tabPage1.Controls.Add(this.cPFTextBox);
             this.tabPage1.Controls.Add(this.functionComboBox);
             this.tabPage1.Controls.Add(functionLabel);
             this.tabPage1.Controls.Add(this.emailTextBox);
@@ -399,6 +379,35 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // phoneMaskedTextBox
+            // 
+            this.phoneMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "Phone", true));
+            this.phoneMaskedTextBox.Location = new System.Drawing.Point(389, 201);
+            this.phoneMaskedTextBox.Mask = "(00) 00000-0000";
+            this.phoneMaskedTextBox.Name = "phoneMaskedTextBox";
+            this.phoneMaskedTextBox.Size = new System.Drawing.Size(156, 20);
+            this.phoneMaskedTextBox.TabIndex = 7;
+            // 
+            // lblValidateCPF
+            // 
+            this.lblValidateCPF.AutoSize = true;
+            this.lblValidateCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.lblValidateCPF.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateCPF.Location = new System.Drawing.Point(56, 156);
+            this.lblValidateCPF.Name = "lblValidateCPF";
+            this.lblValidateCPF.Size = new System.Drawing.Size(21, 13);
+            this.lblValidateCPF.TabIndex = 28;
+            this.lblValidateCPF.Text = "cpf";
+            // 
+            // cPFMaskedTextBox
+            // 
+            this.cPFMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerUserBindingSource, "CPF", true));
+            this.cPFMaskedTextBox.Location = new System.Drawing.Point(56, 132);
+            this.cPFMaskedTextBox.Mask = "000.000.000-00";
+            this.cPFMaskedTextBox.Name = "cPFMaskedTextBox";
+            this.cPFMaskedTextBox.Size = new System.Drawing.Size(219, 20);
+            this.cPFMaskedTextBox.TabIndex = 3;
             // 
             // tabPage2
             // 
@@ -442,19 +451,16 @@
 
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.BindingSource registerUserBindingSource;
-        private System.Windows.Forms.TextBox cPFTextBox;
         private System.Windows.Forms.TextBox detailsTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.ComboBox functionComboBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox rGTextBox;
         private System.Windows.Forms.ComboBox sexComboBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblValidateName;
-        private System.Windows.Forms.Label lblValidateCPF;
         private System.Windows.Forms.Label lblValidatePassword;
         private System.Windows.Forms.Label lblValidateEmail;
         private System.Windows.Forms.Label lblValidateRG;
@@ -462,5 +468,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.MaskedTextBox cPFMaskedTextBox;
+        private System.Windows.Forms.Label lblValidateCPF;
+        private System.Windows.Forms.MaskedTextBox phoneMaskedTextBox;
     }
 }

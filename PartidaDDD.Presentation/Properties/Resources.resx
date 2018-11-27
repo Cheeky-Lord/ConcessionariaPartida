@@ -118,22 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sign-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\sign-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_286553" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\delete_286553.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sign-up30x30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\sign-up30x30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sign-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\sign-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fiat_chrysler_automobiles_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\fiat_chrysler_automobiles_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="estoque" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\estoque.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_286553" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\delete_286553.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FCA_Logo_Marcas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FCA_Logo_Marcas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

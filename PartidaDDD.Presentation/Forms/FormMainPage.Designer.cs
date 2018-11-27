@@ -53,7 +53,7 @@
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutEFecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnNewVehicle = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -147,20 +147,20 @@
             // btnRegisterCustomer
             // 
             this.btnRegisterCustomer.Name = "btnRegisterCustomer";
-            this.btnRegisterCustomer.Size = new System.Drawing.Size(180, 22);
+            this.btnRegisterCustomer.Size = new System.Drawing.Size(149, 22);
             this.btnRegisterCustomer.Text = "Cadastrar";
             this.btnRegisterCustomer.Click += new System.EventHandler(this.btnRegisterCustomer_Click);
             // 
             // procurarToolStripMenuItem
             // 
             this.procurarToolStripMenuItem.Name = "procurarToolStripMenuItem";
-            this.procurarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procurarToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.procurarToolStripMenuItem.Text = "Débito Cliente";
             // 
             // btnFindCustomer
             // 
             this.btnFindCustomer.Name = "btnFindCustomer";
-            this.btnFindCustomer.Size = new System.Drawing.Size(180, 22);
+            this.btnFindCustomer.Size = new System.Drawing.Size(149, 22);
             this.btnFindCustomer.Text = "Pesquisar";
             // 
             // fornecedorToolStripMenuItem
@@ -251,15 +251,16 @@
             this.logoutEFecharToolStripMenuItem.Text = "Logout e Fechar";
             this.logoutEFecharToolStripMenuItem.Click += new System.EventHandler(this.logoutEFecharToolStripMenuItem_Click);
             // 
-            // button1
+            // btnStock
             // 
-            this.button1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(103, 241);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ESTOQUE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnStock.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.Location = new System.Drawing.Point(103, 241);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(149, 55);
+            this.btnStock.TabIndex = 1;
+            this.btnStock.Text = "ESTOQUE";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // button2
             // 
@@ -312,7 +313,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNewVehicle);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnStock);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -347,7 +348,7 @@
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutEFecharToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnNewVehicle;
         private System.Windows.Forms.PictureBox pictureBox1;

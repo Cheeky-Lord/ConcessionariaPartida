@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PartidaDDD.Domain.Commands.Handlers;
+using PartidaDDD.Domain.Helpers;
 using PartidaDDD.Domain.Repositories;
 using PartidaDDD.Infra.Context;
 using PartidaDDD.Infra.Repositories;
@@ -20,11 +21,16 @@ namespace PartidaDDD.Presentation
             services.AddTransient<UserHandler>();
             services.AddTransient<FormRegisterUser>();
 
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<CustomerHandler>();
+            services.AddTransient<FormRegisterCustomer>();
+
             services.AddTransient<FormMainPage>();
             services.AddTransient<FormContainer>();
             services.AddTransient<FormLogin>();
-            services.AddTransient<FormRegisterCustomer>();
+            services.AddTransient<FormStock>();
 
+            services.AddTransient<ValidateHelper>();
             services.AddTransient<IDBConfiguration, MSSqlConfiguration>();
             services.AddSingleton<IDB, MSSqlDB>();
 

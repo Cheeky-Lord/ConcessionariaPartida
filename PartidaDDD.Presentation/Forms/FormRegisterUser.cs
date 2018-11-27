@@ -1,5 +1,6 @@
 ﻿using PartidaDDD.Domain.Commands.Handlers;
 using PartidaDDD.Domain.Commands.Inputs;
+using PartidaDDD.Domain.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace PartidaDDD.Presentation.Forms
 {
     public partial class FormRegisterUser : Form
     {
+        private readonly ValidateHelper validateHelper = new ValidateHelper();
         private UserHandler _handler;
 
         public FormRegisterUser(UserHandler handler)
@@ -39,6 +41,7 @@ namespace PartidaDDD.Presentation.Forms
         private void FormRegisterUser_Load(object sender, EventArgs e)
         {
             registerUserBindingSource.AddNew();
+            CleanValidationForm();
         }
 
         private bool ValidateForm()
@@ -55,7 +58,7 @@ namespace PartidaDDD.Presentation.Forms
                 validated = false;
                 lblValidateName.Text = "A propriedade Nome deve ter no mínimo 2 caracteres";
             }
-            if (cPFTextBox.Text.Length != 11)
+            if (validateHelper.ValidateCPF(cPFMaskedTextBox.Text) == false)
             {
                 validated = false;
                 lblValidateCPF.Text = "CPF inválido";
@@ -91,15 +94,7 @@ namespace PartidaDDD.Presentation.Forms
 
         private void CleanFields()
         {
-            nameTextBox.Text = "";
-            cPFTextBox.Text = "";
-            passwordTextBox.Text = "";
-            emailTextBox.Text = "";
-            functionComboBox.Text = "";
-            sexComboBox.Text = "";
-            detailsTextBox.Text = "";
-            rGTextBox.Text = "";
-            phoneTextBox.Text = "";
+            registerUserBindingSource.Clear();
         }
     }
 }

@@ -93,6 +93,16 @@ namespace PartidaDDD.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FCA_Logo_Marcas {
+            get {
+                object obj = ResourceManager.GetObject("FCA_Logo_Marcas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fiat_chrysler_automobiles_logo {
             get {
                 object obj = ResourceManager.GetObject("fiat_chrysler_automobiles_logo", resourceCulture);

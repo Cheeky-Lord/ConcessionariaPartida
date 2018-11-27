@@ -17,12 +17,14 @@ namespace PartidaDDD.Presentation
         private readonly FormRegisterCar _registerCar;
         private readonly FormRegisterUser _registerUser;
         private readonly FormRegisterCustomer _registerCustomer;
+        private readonly FormStock _stock;
 
-        public FormMainPage(FormRegisterCar registerCar, FormRegisterUser registerUser, FormRegisterCustomer registerCustomer)
+        public FormMainPage(FormRegisterCar registerCar, FormRegisterUser registerUser, FormRegisterCustomer registerCustomer, FormStock stock)
         {
             _registerCar = registerCar;
             _registerUser = registerUser;
             _registerCustomer = registerCustomer;
+            _stock = stock;
 
             InitializeComponent();
         }
@@ -57,6 +59,11 @@ namespace PartidaDDD.Presentation
         private void btnRegisterCustomer_Click(object sender, EventArgs e)
         {
             _registerCustomer.ShowDialog();
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            _stock.ShowDialog();
         }
     }
 }

@@ -48,30 +48,35 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterCustomer));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.phone1MaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.lblValidateType = new System.Windows.Forms.Label();
+            this.documentMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.lblValidateDocument = new System.Windows.Forms.Label();
+            this.lblValidateSocial = new System.Windows.Forms.Label();
+            this.lblValidateName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFindImage = new System.Windows.Forms.Button();
             this.imageTextBox = new System.Windows.Forms.TextBox();
-            this.registerCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cEPTextBox = new System.Windows.Forms.TextBox();
             this.streetTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.numberTextBox = new System.Windows.Forms.TextBox();
             this.neighborhoodTextBox = new System.Windows.Forms.TextBox();
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.typeComboBox = new System.Windows.Forms.ComboBox();
-            this.documentTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phone1TextBox = new System.Windows.Forms.TextBox();
-            this.phone2TextBox = new System.Windows.Forms.TextBox();
-            this.phone3TextBox = new System.Windows.Forms.TextBox();
             this.socialNameTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.aboutTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.phone2MaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.phone3MaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.cEPMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.lblValidateEmail = new System.Windows.Forms.Label();
+            this.registerCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descriptionLabel = new System.Windows.Forms.Label();
             aboutLabel = new System.Windows.Forms.Label();
             cEPLabel = new System.Windows.Forms.Label();
@@ -92,9 +97,9 @@
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registerCustomerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registerCustomerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // descriptionLabel
@@ -181,29 +186,29 @@
             // phone1Label
             // 
             phone1Label.AutoSize = true;
-            phone1Label.Location = new System.Drawing.Point(10, 160);
+            phone1Label.Location = new System.Drawing.Point(42, 160);
             phone1Label.Name = "phone1Label";
-            phone1Label.Size = new System.Drawing.Size(61, 13);
+            phone1Label.Size = new System.Drawing.Size(29, 13);
             phone1Label.TabIndex = 20;
-            phone1Label.Text = "Telefone 1:";
+            phone1Label.Text = "Fixo:";
             // 
             // phone2Label
             // 
             phone2Label.AutoSize = true;
-            phone2Label.Location = new System.Drawing.Point(213, 160);
+            phone2Label.Location = new System.Drawing.Point(232, 160);
             phone2Label.Name = "phone2Label";
-            phone2Label.Size = new System.Drawing.Size(61, 13);
+            phone2Label.Size = new System.Drawing.Size(42, 13);
             phone2Label.TabIndex = 22;
-            phone2Label.Text = "Telefone 2:";
+            phone2Label.Text = "Celular:";
             // 
             // phone3Label
             // 
             phone3Label.AutoSize = true;
-            phone3Label.Location = new System.Drawing.Point(16, 214);
+            phone3Label.Location = new System.Drawing.Point(42, 214);
             phone3Label.Name = "phone3Label";
-            phone3Label.Size = new System.Drawing.Size(58, 13);
+            phone3Label.Size = new System.Drawing.Size(27, 13);
             phone3Label.TabIndex = 24;
-            phone3Label.Text = "Telefone 3";
+            phone3Label.Text = "Fax:";
             // 
             // socialNameLabel
             // 
@@ -254,22 +259,27 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.lblValidateEmail);
+            this.tabPage1.Controls.Add(this.phone3MaskedTextBox);
+            this.tabPage1.Controls.Add(this.phone2MaskedTextBox);
+            this.tabPage1.Controls.Add(this.phone1MaskedTextBox);
+            this.tabPage1.Controls.Add(this.lblValidateType);
+            this.tabPage1.Controls.Add(this.documentMaskedTextBox);
+            this.tabPage1.Controls.Add(this.lblValidateDocument);
+            this.tabPage1.Controls.Add(this.lblValidateSocial);
+            this.tabPage1.Controls.Add(this.lblValidateName);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(typeLabel);
             this.tabPage1.Controls.Add(this.typeComboBox);
             this.tabPage1.Controls.Add(documentLabel);
-            this.tabPage1.Controls.Add(this.documentTextBox);
             this.tabPage1.Controls.Add(emailLabel);
             this.tabPage1.Controls.Add(this.emailTextBox);
             this.tabPage1.Controls.Add(nameLabel);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(phone1Label);
-            this.tabPage1.Controls.Add(this.phone1TextBox);
             this.tabPage1.Controls.Add(phone2Label);
-            this.tabPage1.Controls.Add(this.phone2TextBox);
             this.tabPage1.Controls.Add(phone3Label);
-            this.tabPage1.Controls.Add(this.phone3TextBox);
             this.tabPage1.Controls.Add(socialNameLabel);
             this.tabPage1.Controls.Add(this.socialNameTextBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -279,6 +289,67 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // phone1MaskedTextBox
+            // 
+            this.phone1MaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Phone1", true));
+            this.phone1MaskedTextBox.Location = new System.Drawing.Point(77, 157);
+            this.phone1MaskedTextBox.Mask = "(00)00000-0000";
+            this.phone1MaskedTextBox.Name = "phone1MaskedTextBox";
+            this.phone1MaskedTextBox.Size = new System.Drawing.Size(103, 20);
+            this.phone1MaskedTextBox.TabIndex = 6;
+            // 
+            // lblValidateType
+            // 
+            this.lblValidateType.AutoSize = true;
+            this.lblValidateType.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidateType.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateType.Location = new System.Drawing.Point(277, 89);
+            this.lblValidateType.Name = "lblValidateType";
+            this.lblValidateType.Size = new System.Drawing.Size(44, 13);
+            this.lblValidateType.TabIndex = 40;
+            this.lblValidateType.Text = "validate";
+            // 
+            // documentMaskedTextBox
+            // 
+            this.documentMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Document", true));
+            this.documentMaskedTextBox.Location = new System.Drawing.Point(79, 64);
+            this.documentMaskedTextBox.Name = "documentMaskedTextBox";
+            this.documentMaskedTextBox.Size = new System.Drawing.Size(155, 20);
+            this.documentMaskedTextBox.TabIndex = 3;
+            // 
+            // lblValidateDocument
+            // 
+            this.lblValidateDocument.AutoSize = true;
+            this.lblValidateDocument.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidateDocument.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateDocument.Location = new System.Drawing.Point(77, 87);
+            this.lblValidateDocument.Name = "lblValidateDocument";
+            this.lblValidateDocument.Size = new System.Drawing.Size(44, 13);
+            this.lblValidateDocument.TabIndex = 38;
+            this.lblValidateDocument.Text = "validate";
+            // 
+            // lblValidateSocial
+            // 
+            this.lblValidateSocial.AutoSize = true;
+            this.lblValidateSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidateSocial.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateSocial.Location = new System.Drawing.Point(364, 40);
+            this.lblValidateSocial.Name = "lblValidateSocial";
+            this.lblValidateSocial.Size = new System.Drawing.Size(44, 13);
+            this.lblValidateSocial.TabIndex = 37;
+            this.lblValidateSocial.Text = "validate";
+            // 
+            // lblValidateName
+            // 
+            this.lblValidateName.AutoSize = true;
+            this.lblValidateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidateName.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateName.Location = new System.Drawing.Point(49, 40);
+            this.lblValidateName.Name = "lblValidateName";
+            this.lblValidateName.Size = new System.Drawing.Size(44, 13);
+            this.lblValidateName.TabIndex = 36;
+            this.lblValidateName.Text = "validate";
             // 
             // groupBox2
             // 
@@ -294,7 +365,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(16, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(164, 135);
@@ -306,7 +377,7 @@
             this.btnFindImage.Location = new System.Drawing.Point(146, 160);
             this.btnFindImage.Name = "btnFindImage";
             this.btnFindImage.Size = new System.Drawing.Size(34, 23);
-            this.btnFindImage.TabIndex = 14;
+            this.btnFindImage.TabIndex = 16;
             this.btnFindImage.Text = "...";
             this.btnFindImage.UseVisualStyleBackColor = true;
             // 
@@ -316,15 +387,11 @@
             this.imageTextBox.Location = new System.Drawing.Point(16, 163);
             this.imageTextBox.Name = "imageTextBox";
             this.imageTextBox.Size = new System.Drawing.Size(124, 20);
-            this.imageTextBox.TabIndex = 13;
-            // 
-            // registerCustomerBindingSource
-            // 
-            this.registerCustomerBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterCustomer);
+            this.imageTextBox.TabIndex = 222;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cEPTextBox);
+            this.groupBox1.Controls.Add(this.cEPMaskedTextBox);
             this.groupBox1.Controls.Add(cEPLabel);
             this.groupBox1.Controls.Add(this.streetTextBox);
             this.groupBox1.Controls.Add(cityLabel);
@@ -343,21 +410,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Endereço";
             // 
-            // cEPTextBox
-            // 
-            this.cEPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "CEP", true));
-            this.cEPTextBox.Location = new System.Drawing.Point(113, 25);
-            this.cEPTextBox.Name = "cEPTextBox";
-            this.cEPTextBox.Size = new System.Drawing.Size(119, 20);
-            this.cEPTextBox.TabIndex = 3;
-            // 
             // streetTextBox
             // 
             this.streetTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Street", true));
             this.streetTextBox.Location = new System.Drawing.Point(292, 25);
             this.streetTextBox.Name = "streetTextBox";
             this.streetTextBox.Size = new System.Drawing.Size(253, 20);
-            this.streetTextBox.TabIndex = 31;
+            this.streetTextBox.TabIndex = 10;
             // 
             // cityTextBox
             // 
@@ -365,7 +424,7 @@
             this.cityTextBox.Location = new System.Drawing.Point(250, 75);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(108, 20);
-            this.cityTextBox.TabIndex = 5;
+            this.cityTextBox.TabIndex = 12;
             // 
             // numberTextBox
             // 
@@ -373,7 +432,7 @@
             this.numberTextBox.Location = new System.Drawing.Point(128, 75);
             this.numberTextBox.Name = "numberTextBox";
             this.numberTextBox.Size = new System.Drawing.Size(63, 20);
-            this.numberTextBox.TabIndex = 19;
+            this.numberTextBox.TabIndex = 11;
             // 
             // neighborhoodTextBox
             // 
@@ -381,7 +440,7 @@
             this.neighborhoodTextBox.Location = new System.Drawing.Point(407, 75);
             this.neighborhoodTextBox.Name = "neighborhoodTextBox";
             this.neighborhoodTextBox.Size = new System.Drawing.Size(138, 20);
-            this.neighborhoodTextBox.TabIndex = 17;
+            this.neighborhoodTextBox.TabIndex = 13;
             // 
             // stateTextBox
             // 
@@ -389,24 +448,21 @@
             this.stateTextBox.Location = new System.Drawing.Point(125, 116);
             this.stateTextBox.Name = "stateTextBox";
             this.stateTextBox.Size = new System.Drawing.Size(276, 20);
-            this.stateTextBox.TabIndex = 29;
+            this.stateTextBox.TabIndex = 14;
             // 
             // typeComboBox
             // 
             this.typeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Type", true));
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.Items.AddRange(new object[] {
+            "Pessoa Física",
+            "Pessoa Jurídica"});
             this.typeComboBox.Location = new System.Drawing.Point(280, 64);
             this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.typeComboBox.TabIndex = 33;
-            // 
-            // documentTextBox
-            // 
-            this.documentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Document", true));
-            this.documentTextBox.Location = new System.Drawing.Point(79, 64);
-            this.documentTextBox.Name = "documentTextBox";
-            this.documentTextBox.Size = new System.Drawing.Size(138, 20);
-            this.documentTextBox.TabIndex = 9;
+            this.typeComboBox.Size = new System.Drawing.Size(146, 21);
+            this.typeComboBox.TabIndex = 4;
+            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
             // emailTextBox
             // 
@@ -414,7 +470,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(52, 105);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(238, 20);
-            this.emailTextBox.TabIndex = 11;
+            this.emailTextBox.TabIndex = 5;
             // 
             // nameTextBox
             // 
@@ -422,31 +478,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(52, 17);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(198, 20);
-            this.nameTextBox.TabIndex = 15;
-            // 
-            // phone1TextBox
-            // 
-            this.phone1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Phone1", true));
-            this.phone1TextBox.Location = new System.Drawing.Point(80, 157);
-            this.phone1TextBox.Name = "phone1TextBox";
-            this.phone1TextBox.Size = new System.Drawing.Size(120, 20);
-            this.phone1TextBox.TabIndex = 21;
-            // 
-            // phone2TextBox
-            // 
-            this.phone2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Phone2", true));
-            this.phone2TextBox.Location = new System.Drawing.Point(280, 157);
-            this.phone2TextBox.Name = "phone2TextBox";
-            this.phone2TextBox.Size = new System.Drawing.Size(104, 20);
-            this.phone2TextBox.TabIndex = 23;
-            // 
-            // phone3TextBox
-            // 
-            this.phone3TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Phone3", true));
-            this.phone3TextBox.Location = new System.Drawing.Point(80, 211);
-            this.phone3TextBox.Name = "phone3TextBox";
-            this.phone3TextBox.Size = new System.Drawing.Size(104, 20);
-            this.phone3TextBox.TabIndex = 25;
+            this.nameTextBox.TabIndex = 1;
             // 
             // socialNameTextBox
             // 
@@ -454,7 +486,7 @@
             this.socialNameTextBox.Location = new System.Drawing.Point(367, 17);
             this.socialNameTextBox.Name = "socialNameTextBox";
             this.socialNameTextBox.Size = new System.Drawing.Size(289, 20);
-            this.socialNameTextBox.TabIndex = 27;
+            this.socialNameTextBox.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -477,7 +509,7 @@
             this.aboutTextBox.Multiline = true;
             this.aboutTextBox.Name = "aboutTextBox";
             this.aboutTextBox.Size = new System.Drawing.Size(641, 162);
-            this.aboutTextBox.TabIndex = 3;
+            this.aboutTextBox.TabIndex = 16;
             // 
             // descriptionTextBox
             // 
@@ -486,7 +518,7 @@
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(641, 145);
-            this.descriptionTextBox.TabIndex = 1;
+            this.descriptionTextBox.TabIndex = 15;
             // 
             // btnRegister
             // 
@@ -496,11 +528,53 @@
             this.btnRegister.Location = new System.Drawing.Point(718, 34);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(114, 52);
-            this.btnRegister.TabIndex = 1;
+            this.btnRegister.TabIndex = 17;
             this.btnRegister.Text = "Registrar";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // phone2MaskedTextBox
+            // 
+            this.phone2MaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Phone2", true));
+            this.phone2MaskedTextBox.Location = new System.Drawing.Point(280, 157);
+            this.phone2MaskedTextBox.Mask = "(00)00000-0000";
+            this.phone2MaskedTextBox.Name = "phone2MaskedTextBox";
+            this.phone2MaskedTextBox.Size = new System.Drawing.Size(107, 20);
+            this.phone2MaskedTextBox.TabIndex = 7;
+            // 
+            // phone3MaskedTextBox
+            // 
+            this.phone3MaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "Phone3", true));
+            this.phone3MaskedTextBox.Location = new System.Drawing.Point(79, 211);
+            this.phone3MaskedTextBox.Mask = "(00)00000-0000";
+            this.phone3MaskedTextBox.Name = "phone3MaskedTextBox";
+            this.phone3MaskedTextBox.Size = new System.Drawing.Size(101, 20);
+            this.phone3MaskedTextBox.TabIndex = 8;
+            // 
+            // cEPMaskedTextBox
+            // 
+            this.cEPMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.registerCustomerBindingSource, "CEP", true));
+            this.cEPMaskedTextBox.Location = new System.Drawing.Point(113, 25);
+            this.cEPMaskedTextBox.Mask = "00000-000";
+            this.cEPMaskedTextBox.Name = "cEPMaskedTextBox";
+            this.cEPMaskedTextBox.Size = new System.Drawing.Size(123, 20);
+            this.cEPMaskedTextBox.TabIndex = 9;
+            // 
+            // lblValidateEmail
+            // 
+            this.lblValidateEmail.AutoSize = true;
+            this.lblValidateEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValidateEmail.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateEmail.Location = new System.Drawing.Point(49, 128);
+            this.lblValidateEmail.Name = "lblValidateEmail";
+            this.lblValidateEmail.Size = new System.Drawing.Size(44, 13);
+            this.lblValidateEmail.TabIndex = 44;
+            this.lblValidateEmail.Text = "validate";
+            // 
+            // registerCustomerBindingSource
+            // 
+            this.registerCustomerBindingSource.DataSource = typeof(PartidaDDD.Domain.Commands.Inputs.RegisterCustomer);
             // 
             // FormRegisterCustomer
             // 
@@ -517,17 +591,18 @@
             this.Name = "FormRegisterCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Concessionária Partida | Cadastro de Cliente";
+            this.Load += new System.EventHandler(this.FormRegisterCustomer_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registerCustomerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registerCustomerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,23 +617,28 @@
         private System.Windows.Forms.TextBox imageTextBox;
         private System.Windows.Forms.BindingSource registerCustomerBindingSource;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox cEPTextBox;
         private System.Windows.Forms.TextBox streetTextBox;
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.TextBox numberTextBox;
         private System.Windows.Forms.TextBox neighborhoodTextBox;
         private System.Windows.Forms.TextBox stateTextBox;
         private System.Windows.Forms.ComboBox typeComboBox;
-        private System.Windows.Forms.TextBox documentTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox phone1TextBox;
-        private System.Windows.Forms.TextBox phone2TextBox;
-        private System.Windows.Forms.TextBox phone3TextBox;
         private System.Windows.Forms.TextBox socialNameTextBox;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox aboutTextBox;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.MaskedTextBox phone1MaskedTextBox;
+        private System.Windows.Forms.Label lblValidateType;
+        private System.Windows.Forms.MaskedTextBox documentMaskedTextBox;
+        private System.Windows.Forms.Label lblValidateDocument;
+        private System.Windows.Forms.Label lblValidateSocial;
+        private System.Windows.Forms.Label lblValidateName;
+        private System.Windows.Forms.MaskedTextBox phone3MaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox phone2MaskedTextBox;
+        private System.Windows.Forms.MaskedTextBox cEPMaskedTextBox;
+        private System.Windows.Forms.Label lblValidateEmail;
     }
 }

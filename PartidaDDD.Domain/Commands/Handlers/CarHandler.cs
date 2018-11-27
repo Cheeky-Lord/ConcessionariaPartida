@@ -18,9 +18,9 @@ namespace PartidaDDD.Domain.Commands.Handlers
 
         public ICommandResult Handler(RegisterCar command)
         {
-            Factory factory = new Factory(command.Chassis, command.Doors, command.HydraulicSteering, command.Automatic);
+            Factory factory = new Factory(command.Origin, command.Chassis, command.Doors, command.Steering, command.Transmission, command.EletronicWindow, command.Color);
 
-            Car car = new Car(command.Name, command.Brand, factory, command.Year, command.Image);
+            Car car = new Car(command.Model, command.Brand, factory, command.Year, command.Image, command.Price);
 
             // Salva no banco.
             _carRepository.NewCar(car);

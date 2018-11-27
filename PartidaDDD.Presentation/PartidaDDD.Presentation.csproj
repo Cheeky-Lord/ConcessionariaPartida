@@ -114,6 +114,12 @@
     <Compile Include="Forms\FormShowRoom.Designer.cs">
       <DependentUpon>FormShowRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormAboutConcessionaria.resx">
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormShowRoom.resx">
       <DependentUpon>FormShowRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -188,9 +197,13 @@
     <None Include="Images\Edit.png" />
     <None Include="Images\delete_286553.png" />
     <None Include="Images\estoque.PNG" />
+    <None Include="Images\FCA_Logo_Marcas.png" />
     <Content Include="Images\fiat_chrysler_automobiles_logo.png" />
     <None Include="Images\sign-up30x30.png" />
     <None Include="Images\sign-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBImages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />

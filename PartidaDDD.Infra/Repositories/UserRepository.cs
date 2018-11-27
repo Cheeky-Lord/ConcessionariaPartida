@@ -2,6 +2,7 @@
 using PartidaDDD.Domain.Repositories;
 using PartidaDDD.Infra.Context;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,7 +48,22 @@ namespace PartidaDDD.Infra.Repositories
 
         public void Update(User user)
         {
-            throw new NotImplementedException();
+            using (var con = _DB.GetConnection())
+            {
+                string sql = $"update [User] set Name=@name, Email=@email, Phone=@phone, Password=@password, Details=@details, Sex=@sex, CPF=@cpf, RG=@rg, FunctionName=@functionName where ID=@id";
+                con.Execute(sql, new
+                {
+                    Name = user.Name,
+                    email = user.Email.Address,
+                    phone = user.Phone,
+                    password = user.Password,
+                    details = user.Details,
+                    sex = user.Sex,
+                    cpf = user.CPF.Number,
+                    rg = user.RG.Number,
+                    FunctionName = user.FunctionName
+                });
+            }
         }
 
         public User User(Guid id)
@@ -57,7 +73,12 @@ namespace PartidaDDD.Infra.Repositories
 
         public List<User> Users()
         {
-            throw new NotImplementedException();
+            List<User> users = new List<User>();
+            using (var con = _DB.GetConnection())
+            {
+                string sql = "select * from [User]";
+                return con.Query<User>(sql, commandType: CommandType.Text).ToList();
+            }
         }
     }
 }
